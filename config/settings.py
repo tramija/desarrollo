@@ -47,8 +47,6 @@ INSTALLED_APPS = [
     'core.reports'
    
    
-    #'core.user_mails'
-   
 ]
 
 MIDDLEWARE = [
