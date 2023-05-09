@@ -1,0 +1,46 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'category/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+
+<div  style="text-align:center;">
+    {% if messages %}
+    {% for m  in messages %}
+    {{m}}
+    {% endfor%}
+    {% endif %}
+    <a href="{% url 'erp:category_mail' %}" class= "btn btn-primary">Enviar Plan</a>
+</div>
+    <tr>
+             <th scope="col">Nro</th>
+            <th scope="col">Nombre del Plan</th>
+            <th scope="col">Fecha de registro</th>
+            <th scope="col">Descripcion del Problema </th>
+            <th scope="col">Clasificacion</th>
+            <th scope="col">Norma Incumplida</th>
+            <th scope="col">TipoAccion</th>
+            <th scope="col">fuentePlan</th>
+            <th scope="col">Entidad</th>
+            <th scope="col">Proceso</th>
+            <th scope="col">Tratamiento Inmediato</th>
+            <th scope="col">Analisis Causa</th>
+            <th scope="col">Evidencia</th>
+            <th scope="col">CausaRaiz</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Opciones</th>
+           
+
+    </tr>
+
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}

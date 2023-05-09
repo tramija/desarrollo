@@ -1,0 +1,39 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block head_list %}
+    <script src="{% static 'evaluacion/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+
+
+<div  style="text-align:center;">
+    {% if messages %}
+    {% for m  in messages %}
+    {{m}}
+    {% endfor%}
+    {% endif %}
+    <a href="{% url 'erp:evaluacion_mail' %}" class= "btn btn-primary">Enviar Plan</a>
+</div>
+    <tr>
+            <th scope="col">Nro</th>
+            <th scope="col"style="width: 20%;">Nombre del PLan de acciòn</th>
+            <th scope="col">Fecha de seguimiento</th>
+            <th scope="col">Responsable </th>
+            <th scope="col">Evidencia</th>
+            <th scope="col">Observaciones</th>
+            <th scope="col">Plan Mejora</th>
+            <th scope="col">Fecha de cierre</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Opciones</th>
+            
+    </tr>
+{% endblock %}
+
+{% block rows %}
+
+{% endblock %}
+
+{% block javascript %}
+
+{% endblock %}
